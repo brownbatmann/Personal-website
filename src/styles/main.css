@@ -1,0 +1,12 @@
+/*
+ * main.css
+ * This file acts as the central stylesheet, importing all other partial CSS files.
+ * It defines the overall structure of how our styles are organized and loaded.
+ */
+
+/* Your @import rules will go here */
+
+@import "base/_typography.css";
+@import "components/_header.css";
+@import "components/_footer.css";
+@import "components/_card.css";

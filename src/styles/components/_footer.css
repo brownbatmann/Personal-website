@@ -1,0 +1,56 @@
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Align items to the center of the footer */
+    padding: 3.5rem;      /* Increase top/bottom padding */
+    background: #fff;
+    color: #2b2a2a;
+    font-size: 1.6rem;
+    border-top: 0.2rem solid #e2e2e2; /* Thicker and more visible line */
+    font-family: 'Open Sauce One', 'Open Sauce Sans', Arial, sans-serif;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center; /* Vertically center logo and name */
+    gap: 1rem;         /* Adjust spacing as needed */
+}
+
+.footer-logo {
+    width: 5rem;     /* Make the logo bigger */
+    height: auto;     /* Maintain aspect ratio */
+    margin-top: 0.5rem;        /* No extra spacing */
+    max-width: 100%;  /* Prevent overflow on small screens */
+}
+
+.footer-name {
+    font-family: "Cooper BT", "Cooper Black", Georgia, "Times New Roman", serif;
+    font-size: 3.6rem;
+}
+
+.footer-copyright {
+    margin-top: 1.2rem;
+    color: #585353;
+}
+
+/* Use 'footer-links' for container level styling
+Then 'footer-links a' for link level styling */
+
+.footer-right {
+    margin-top: 5.2rem;
+}
+
+.footer-right a{
+    color: #585353;
+    text-decoration: underline;
+}
+.footer-right a:hover {
+    color: #4f48e1;
+    text-decoration: none;
+}
