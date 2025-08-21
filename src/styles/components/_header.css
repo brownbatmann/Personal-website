@@ -1,15 +1,17 @@
-.main-header {
+header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1.8rem 0rem;
+    padding: 1.8rem;
     background: transparent;
     margin-top: 1rem;
+    font-family: 'Open Sauce One', 'Open Sauce Sans', Arial, sans-serif;
 }
 
 .header-left {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
 }
 
@@ -29,7 +31,7 @@
 .header-nav {
     display: flex;
     align-items: center;
-    gap: 6rem;
+    gap: clamp(1.2rem, 4vw, 6rem); /* Dynamic gap: min 1.2rem, max 6rem, scales with viewport */
     font-size: 1.7rem;
 }
 
