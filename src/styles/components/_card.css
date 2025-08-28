@@ -14,65 +14,112 @@ section {
     box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.skills, .projects {
+.blog-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+    gap: 2.5rem;
 }
 
-.skill, .project {
-    background: #e2e2e2;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    flex: 1 1 30%;
-    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.2);
-}
-
-
-* {
-  box-sizing: border-box;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Add a card effect for articles */
-.card {
-  background-color: white;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
+/* Featured blog card (larger one at top) */
+.blog-card.featured {
     width: 100%;
-    padding: 0;
-  }
+    max-width: 900px;
+    aspect-ratio: 16 / 6;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card.featured:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Small blog cards (two beneath) */
+.blog-cards-row {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.blog-card.small {
+    flex: 1;
+    min-width: 0; /* Allows cards to shrink below min-content */
+    max-width: calc(50% - 1rem);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.blog-card.small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Common styles for all blog cards */
+.card-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-title {
+    margin: 0 0 0.8rem;
+    font-size: 1.5rem;
+    color: #2b2a2a;
+}
+
+.blog-card.small .card-title {
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+}
+
+.card-excerpt {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #585353;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blog-cards-row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .blog-card.small {
+        max-width: 100%;
+    }
+    
+    .blog-card.featured {
+        aspect-ratio: 16 / 9;
+    }
 }
