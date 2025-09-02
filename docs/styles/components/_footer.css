@@ -55,17 +55,21 @@ Then 'footer-links a' for link level styling */
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     footer {
         flex-direction: column;
         text-align: center;
-        padding: 2.5rem 1.5rem;
-        gap: 2rem;
+        padding: 2.2rem 3rem; /* Increased horizontal padding for larger side gaps */
+        gap: 1.5rem;
+        font-size: 1.3rem; /* Smaller text for footer */
     }
     .footer-left, .footer-right {
         margin-top: 0;
     }
     .footer-brand {
         justify-content: center; /* Center logo and name */
+    }
+    .footer-name {
+        font-size: 3rem; /* Smaller name text */
     }
 }

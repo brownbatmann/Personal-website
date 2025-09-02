@@ -54,7 +54,7 @@ section {
     /* No need to modify this as text-align: center from parent will apply */
 }
 
-/* Responsive adjustments for the hero section */
+/* Responsive hero section for iPads / Tablets */
 @media (max-width: 768px) {
     .hero-content {
         padding: 1.5rem 2rem;
@@ -67,6 +67,22 @@ section {
     
     .hero-content p {
         font-size: 1.6rem;
+    }
+}
+
+/* Responsive hero section for Phones */
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1.5rem 2rem;
+        /* Already centered in the main class now */
+    }
+    
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.4rem;
     }
 }
 
@@ -163,7 +179,7 @@ section {
     color: #585353;
 }
 
-/* Responsive adjustments for the blog cards */
+/* Responsive blog cards for iPads / Tablets */
 @media (max-width: 768px) {
     .blog-cards-row {
         flex-direction: column;
@@ -187,6 +203,33 @@ section {
     }
     
     .blog-card.featured {
-        aspect-ratio: 16 / 9;
+        aspect-ratio: 16 / 9; /* Slightly taller aspect ratio on tablets */
+    }
+
+    .blog-card.small {
+        aspect-ratio: 16 / 9; /* Slightly taller aspect ratio */
+    }
+}
+
+/* Responsive blog cards for Phones */
+@media (max-width: 480px) {
+    .card-title {
+        font-size: 1.8rem;
+    }
+
+    .blog-card.small .card-title {
+        font-size: 1.8rem;
+    }
+
+    .card-excerpt {
+        font-size: 1.2rem;
+    }
+    
+    .blog-card.featured {
+        aspect-ratio: 16 / 13; /* Taller aspect ratio on very small screens */
+    }
+
+    .blog-card.small {
+        aspect-ratio: 16 / 13; /* Slightly taller aspect ratio */
     }
 }
