@@ -11,7 +11,63 @@ section {
     margin: 2rem 0;
     background: #ffffff;
     border-radius: 0.5rem;
-    box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  /* Changed from flex-start to center */
+    padding: 1rem 3rem;
+    max-width: 600px;
+    position: relative;
+    text-align: center;  /* Added to center text */
+    margin: 0 auto;      /* Added to center the container itself */
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    color: #2b2a2a;
+    line-height: 1.1;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0%;          /* Changed from 0 to 20% for centering */
+    height: 0.35rem;
+    width: 55%;
+    background: linear-gradient(90deg, #4a6fa5 0%, #6b98c7 100%);
+    border-radius: 2px;
+}
+
+.hero-content p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #585353;
+    margin-bottom: 2rem;
+    max-width: 95%;
+    /* No need to modify this as text-align: center from parent will apply */
+}
+
+/* Responsive adjustments for the hero section */
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 1.5rem 2rem;
+        /* Already centered in the main class now */
+    }
+    
+    .hero-content h1 {
+        font-size: 4rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.6rem;
+    }
 }
 
 .blog-container {
@@ -20,7 +76,6 @@ section {
     align-items: center;
     max-width: 1200px;
     margin: 3rem auto;
-    padding: 0 2rem;
     gap: 2.5rem;
 }
 
@@ -28,7 +83,7 @@ section {
 .blog-card.featured {
     width: 100%;
     max-width: 900px;
-    aspect-ratio: 16 / 6;
+    aspect-ratio: 16 / 7;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -58,7 +113,7 @@ section {
     flex: 1;
     min-width: 0; /* Allows cards to shrink below min-content */
     max-width: calc(50% - 1rem);
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 11;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -92,23 +147,23 @@ section {
 
 .card-title {
     margin: 0 0 0.8rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     color: #2b2a2a;
 }
 
 .blog-card.small .card-title {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 0 0 0.5rem;
 }
 
 .card-excerpt {
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     color: #585353;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for the blog cards */
 @media (max-width: 768px) {
     .blog-cards-row {
         flex-direction: column;
@@ -117,6 +172,18 @@ section {
     
     .blog-card.small {
         max-width: 100%;
+    }
+
+    .card-title {
+        font-size: 2.4rem;
+    }
+
+    .blog-card.small .card-title {
+        font-size: 2.4rem;
+    }
+
+    .card-excerpt {
+        font-size: 1.4rem;
     }
     
     .blog-card.featured {
