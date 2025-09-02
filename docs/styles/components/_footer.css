@@ -54,3 +54,18 @@ Then 'footer-links a' for link level styling */
     color: #4f48e1;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 1.5rem;
+        gap: 2rem;
+    }
+    .footer-left, .footer-right {
+        margin-top: 0;
+    }
+    .footer-brand {
+        justify-content: center; /* Center logo and name */
+    }
+}
