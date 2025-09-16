@@ -7,6 +7,7 @@ footer {
     color: #2b2a2a;
     font-size: 1.6rem;
     border-top: 0.2rem solid #e2e2e2; /* Thicker and more visible line */
+    margin-top: 2.5rem;
     font-family: 'Open Sauce One', 'Open Sauce Sans', Arial, sans-serif;
 }
 
